@@ -4,7 +4,8 @@ const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-app.listen(3000, () => console.log('Server running'));
+// replace 3000 with (process.env.PORT) when deploying on a server
+app.listen((process.env.PORT), () => console.log('Server running'));
 app.use(bodyParser.json());
 app.use(cors());
 
